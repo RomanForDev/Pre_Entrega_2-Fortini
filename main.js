@@ -63,9 +63,9 @@ function addTicket(ticket) {
 
 function buyConfirm(){
     if(validacion){
-        cart.forEach(ticket => {ticket.precio sumar //falta toda la logica cuando ponga el DOM
+        // cart.forEach(ticket => {ticket.precio sumar //falta toda la logica cuando ponga el DOM
             
-        });
+        // });
     }
     //funcion que sume los precios de los items del carrito.
 }
