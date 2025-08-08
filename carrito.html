@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Carrito</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,11 +13,28 @@
         <h3>Carrito de Compras</h3>
     </header>
     <ul>
-        
+        <label for="opciones">Cantidad</label>
+        <select name="opciones" id="opciones">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+        <li></li>
     </ul>
-    <button>Confirmar Compra</button>
-    <button>Volver</button>
+    <button id="confirm">Confirmar Compra</button>
+    <a href="index.html"><button>Volver</button></a>
 
+    <!-- <form action="customer">
+        <label for="name">Nombre</label>
+        <input type="text" id="name"> <br>
+        <label for="age" id="age">Edad</label>
+        <input type="text"> <br>
+        <label for="email">Email</label>
+        <input type="text" id="email"> <br>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpiar">
+    </form> -->
 
     <script src="main.js"></script>
 </body>

@@ -54,18 +54,30 @@ function addTicket(ticket) {
 }
 
 // function checkCustomer(){
-//     nombre = ;
-//     edad = ;
-//     email = ;
+    // document.innerText = '    <form action="customer">
+    //     <label for="name">Nombre</label>
+    //     <input type="text" id="name"> <br>
+    //     <label for="age" id="age">Edad</label>
+    //     <input type="text"> <br>
+    //     <label for="email">Email</label>
+    //     <input type="text" id="email"> <br>
+        // <input type="submit" value="Enviar">
+        // <input type="reset" value="Limpiar"></input>
+    // </form>'
+    // if(addEventListener('click', 'submit')) { NO SE PUEDE PONER LISTENER COMO CONDICION
+//     nombre = e.taget.value;
+//     edad = e.taget.value;
+//     email = e.taget.value; chequear
 //     descuento = checkDiscount();
 //     return customers.push(new Customer(nombre, edad, email, descuento));
-// }
+// }}
 
 function buyConfirm(){
-    if(validacion){
-        // cart.forEach(ticket => {ticket.precio sumar //falta toda la logica cuando ponga el DOM
+    if(document.addEventListener('click', 'confirm')){
+        checkCostumer()// cart.forEach(ticket => {ticket.precio sumar //falta toda la logica cuando ponga el DOM
             
         // });
+        document.innerHTML(cart);
     }
     //funcion que sume los precios de los items del carrito.
 }
