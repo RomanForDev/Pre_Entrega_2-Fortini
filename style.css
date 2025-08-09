@@ -17,25 +17,25 @@ header h2 {
   padding: 0.4rem;
 }
 
-.parent {
+section .parent {
   border: 2px black;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(7, 5rem);
   gap: 15px;
 }
-.parent :hover {
+section .parent :hover {
   transform: scale(1.07);
   transition: 0.4s ease;
 }
-.parent .div1 {
+section .parent .div1 {
   background-color: whitesmoke;
   grid-column: span 2/span 2;
   grid-column-start: 3;
   text-align: center;
   border: 2px solid black;
 }
-.parent .div2 {
+section .parent .div2 {
   background-color: whitesmoke;
   grid-column: span 4/span 4;
   grid-row: span 4/span 4;
@@ -44,7 +44,7 @@ header h2 {
   text-align: center;
   border: 2px solid black;
 }
-.parent .div3 {
+section .parent .div3 {
   background-color: whitesmoke;
   grid-row: span 6/span 6;
   grid-column-start: 1;
@@ -52,7 +52,7 @@ header h2 {
   text-align: center;
   border: 2px solid black;
 }
-.parent .div4 {
+section .parent .div4 {
   background-color: whitesmoke;
   grid-row: span 6/span 6;
   grid-column-start: 6;
@@ -60,7 +60,7 @@ header h2 {
   text-align: center;
   border: 2px solid black;
 }
-.parent .div5 {
+section .parent .div5 {
   background-color: whitesmoke;
   grid-column: span 4/span 4;
   grid-row: span 2/span 2;
@@ -68,6 +68,19 @@ header h2 {
   grid-row-start: 6;
   text-align: center;
   border: 2px solid black;
+}
+
+.buttonMain {
+  margin: auto;
+  display: block;
+  width: 5rem;
+  height: 4rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 footer {

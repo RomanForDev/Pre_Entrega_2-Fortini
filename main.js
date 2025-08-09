@@ -1,36 +1,44 @@
-let ticketsCampo = 100;
-let ticketsCampoT = 100;
-let ticketsPlateaA = 50;
-let ticketsPlateaB = 50;
-const clase = 0;
+let ticketsCampo = [{id: 1, 
+    precio: 200, 
+    cantidad: 0}];
+let ticketsCampoT = [{id: 2, 
+    precio: 150, 
+    cantidad: 0}];
+let ticketsPlateaA = [{id: 3, 
+    precio: 100, 
+    cantidad: 0}];
+let ticketsPlateaB = [{id: 4, 
+    precio: 100, 
+    cantidad: 0}];
+// const clase = 0;
 
-class TicketCampo {
-    constructor(precio, cantidad, claseTicket){
-        this.precio = precio;
-        this.cantidad = ticketsCampo;
-        this.claseTicket = clase;
-    }}
+// class TicketCampo {
+//     constructor(precio, cantidad, claseTicket){
+//         this.precio = precio;
+//         this.cantidad = ticketsCampo;
+//         this.claseTicket = clase;
+//     }}
 
-class TicketCampoT {
-    constructor(precio, cantidad, claseTicket){
-        this.precio = precio;
-        this.cantidad = ticketsCampoT;
-        this.claseTicket = clase;
-    }}
+// class TicketCampoT {
+//     constructor(precio, cantidad, claseTicket){
+//         this.precio = precio;
+//         this.cantidad = ticketsCampoT;
+//         this.claseTicket = clase;
+//     }}
 
-class TicketPlateaA {
-        constructor(precio, cantidad, claseTicket){
-        this.precio = precio;
-        this.cantidad = ticketsPlateaA;
-        this.claseTicket = clase;
-}}
+// class TicketPlateaA {
+//         constructor(precio, cantidad, claseTicket){
+//         this.precio = precio;
+//         this.cantidad = ticketsPlateaA;
+//         this.claseTicket = clase;
+// }}
 
-class TicketPlateaB {
-        constructor(precio, cantidad, claseTicket){
-        this.precio = precio;
-        this.cantidad = ticketsPlateaB;
-        this.claseTicket = clase;
-}}
+// class TicketPlateaB {
+//         constructor(precio, cantidad, claseTicket){
+//         this.precio = precio;
+//         this.cantidad = ticketsPlateaB;
+//         this.claseTicket = clase;
+// }}
 
 class Customer {
     constructor(nombre, edad, email, descuento) {
@@ -50,27 +58,44 @@ const customers = [];
 const cart = [];
 let claseDelTicket = 0;
 
-let botonMain = document.querySelectorAll('.buttonMain');
-function determinarClase(){
-    botonMain.forEach(element => {
-        if (botonMain.id = "bone") {
-            let claseDelTicket = 1;
-        }else if(botonMain.id = "btwo"){
-            let claseDelTicket = 2;
-        }else if(botonMain.id = "bthr"){
-            let claseDelTicket = 3;
-        }else if(botonMain.id = "bfou"){
-            let claseDelTicket = 4;
-        }
-    });
-    switch(claseDelTicket) {
-        case 1: 
-        case 2:
-        case 3:
-        case 4:
-    }
-}
-determinarClase();
+// let botonCampo = document.getElementById('bone');
+// let botonCampoT = document.getElementById('btwo');
+// let botonPlateaB = document.getElementById('bthr');
+// let botonPlateaA = document.getElementById('bfou');
+
+
+// botonCampo.addEventListener('click', function(){
+//     let claseDelTicket =+ 1;
+//     console.log(claseDelTicket);
+// })
+
+
+
+// function determinarClase(){
+//     // seleccionTicket = addEventListener('click', botonMain); // Mmmmm no
+//     botonMain.forEach(element => {
+//         if (botonMain.id === "bone") {
+//             cart.push(ticketsCampo[0].precio)
+//             console.log(cart);
+//         }else if(botonMain.id === "btwo"){
+//             cart.push(ticketsCampo[1].precio)
+//             console.log(cart);
+//         }else if(botonMain.id === "bthr"){
+//             cart.push(ticketsCampo[2].precio)
+//             console.log(cart);
+//         }else if(botonMain.id === "bfou"){
+//             cart.push(ticketsCampo[3].precio)
+//             console.log(cart);
+//         }
+//     });
+//     // switch(claseDelTicket) {
+//     //     case 1: 
+//     //     case 2:
+//     //     case 3:
+//     //     case 4:
+//     // }
+// }
+// determinarClase();
 
 // function addTicket(ticket) {
 //     cart.push(ticket);
@@ -84,21 +109,25 @@ determinarClase();
 //     return customers.push(new Customer(nombre, edad, email, descuento));
 // }
 
-let botonConfirmar = document.getElementById("confirm");
+let botonConfirmar = document.querySelector("#buttonConfirm");
 botonConfirmar.addEventListener("click", function(){
 let nuevoForm = document.createElement('section');
-nuevoForm.innerHTML = `<form action="customer">
-    <label for="name">Nombre</label>
-    <input type="text" id="name"> <br>
-    <label for="age" id="age">Edad</label>
-    <input type="text"> <br>
-    <label for="email">Email</label>
-    <input type="text" id="email"> <br>
-    <input type="submit" value="Enviar">
-    <input type="reset" value="Limpiar">
-    </form>`;
-    document.body.appendChild(nuevoForm)
-    document.getElementById('confirm').disabled = true});
+nuevoForm.innerHTML = `    <section class="form">
+        <form action="customer">
+        <label for="name">Nombre</label>
+        <input type="text" id="name"> <br>
+        <label for="age" id="age">Edad</label>
+        <input type="text"> <br>
+        <label for="email">Email</label>
+        <input type="text" id="email"> <br>
+        <label for="cantidad">Cantidad</label>
+        <input type="text" id="cantidad"> <br>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpiar">
+        </form>
+    </section class="form">`;
+    document.body.appendChild(nuevoForm);
+    document.getElementById('buttonConfirm').disabled = true});
 
 // let nombreCliente = ; 
 // let edadCliente = ;
