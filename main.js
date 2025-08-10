@@ -54,9 +54,9 @@ class Customer {
     }
 }
 
-const customers = [];
-const cart = [];
-let claseDelTicket = 0;
+// const customers = [];
+// const cart = [];
+// let claseDelTicket = 0;
 
 // let botonCampo = document.getElementById('bone');
 // let botonCampoT = document.getElementById('btwo');
@@ -109,25 +109,53 @@ let claseDelTicket = 0;
 //     return customers.push(new Customer(nombre, edad, email, descuento));
 // }
 
-let botonConfirmar = document.querySelector("#buttonConfirm");
-botonConfirmar.addEventListener("click", function(){
-let nuevoForm = document.createElement('section');
-nuevoForm.innerHTML = `    <section class="form">
-        <form action="customer">
-        <label for="name">Nombre</label>
-        <input type="text" id="name"> <br>
-        <label for="age" id="age">Edad</label>
-        <input type="text"> <br>
-        <label for="email">Email</label>
-        <input type="text" id="email"> <br>
-        <label for="cantidad">Cantidad</label>
-        <input type="text" id="cantidad"> <br>
-        <input type="submit" value="Enviar">
-        <input type="reset" value="Limpiar">
-        </form>
-    </section class="form">`;
-    document.body.appendChild(nuevoForm);
-    document.getElementById('buttonConfirm').disabled = true});
+// let botonConfirmar = document.querySelector("#buttonConfirm");
+// botonConfirmar.addEventListener("click", function(){
+// let nuevoForm = document.createElement('section');
+// nuevoForm.innerHTML = `    <section class="form">
+//         <form action="" id="form">
+//         <label for="name">Nombre</label>
+//         <input type="text" id="name"> <br>
+//         <label for="age" id="age">Edad</label>
+//         <input type="text"> <br>
+//         <label for="email">Email</label>
+//         <input type="text" id="email"> <br>
+//         <label for="cantidad">Cantidad</label>
+//         <input type="text" id="cantidad"> <br>
+//         <input type="submit" value="Enviar">
+//         <input type="reset" value="Limpiar">
+//         </form>
+//     </section class="form">`;
+//     document.body.appendChild(nuevoForm);
+//     document.getElementById('buttonConfirm').disabled = true});
+
+// function crearCliente() {
+//     let nombre = document.getElementById("name");
+//     nombre.addEventListener("change", (e) => {
+//         let nombre = e.target.value;
+//         console.log(nombre);
+//     });
+//     let edad = document.getElementById("age");
+//     edad.addEventListener("change", (e) => {
+//         let edad = e.target.value;
+//         console.log(edad);
+//     });
+//     let email = document.getElementById("email");
+//     email.addEventListener("change", (e) => {
+//         let email = e.target.value;
+//         console.log(email);
+//     });
+//     let cantidad = document.getElementById("cantidad");
+//     cantidad.addEventListener("change", (e) => {
+//         let cantidad = e.target.value;
+//         console.log(cantidad);
+//     });
+// }
+
+// crearCliente(); // que se yo no anda
+
+// const clienteNuevo = new Customer(nombre, edad, email);
+// console.log(clienteNuevo);
 
 // let nombreCliente = ; 
 // let edadCliente = ;
