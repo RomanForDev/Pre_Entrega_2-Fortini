@@ -182,7 +182,8 @@ email.addEventListener('change', (e) => {
 let cantidad = document.getElementById('cantidad');
 cantidad.addEventListener('change', (e) => {
     cantidad = parseInt(e.target.value * 100);
-    carrito.push(cantidad)
-    console.log(carrito);
+    carrito.push(cantidad);
+    console.log(cantidad);
+    // carro.innerHTML = `<p>${carrito}</p>`
 })
 
