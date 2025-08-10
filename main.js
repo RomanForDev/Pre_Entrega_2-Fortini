@@ -40,19 +40,19 @@ let ticketsPlateaB = [{id: 4,
 //         this.claseTicket = clase;
 // }}
 
-class Customer {
-    constructor(nombre, edad, email, descuento) {
-        this.name = nombre;
-        this.edad = edad;
-        this.email = email;
-        this.descuento = false;
-    }
-    checkDiscount() {
-        if(edad >= 60) {
-            this.descuento = true;
-        }
-    }
-}
+// class Customer {
+//     constructor(nombre, edad, email, descuento) {
+//         this.name = nombre;
+//         this.edad = edad;
+//         this.email = email;
+//         this.descuento = false;
+//     }
+//     checkDiscount() {
+//         if(edad >= 60) {
+//             this.descuento = true;
+//         }
+//     }
+// }
 
 // const customers = [];
 // const cart = [];
@@ -160,4 +160,29 @@ class Customer {
 // let nombreCliente = ; 
 // let edadCliente = ;
 // let emailCliente = ;
+
+////////////////////////////////////////////////////////////////////////////
+const carrito = [];
+
+let nombre = document.getElementById('name');
+nombre.addEventListener('change', (e) => {
+    nombre = e.target.value;
+    console.log(nombre);
+})
+let edad = document.getElementById('age');
+edad.addEventListener('change', (e) => {
+    edad = e.target.value;
+    console.log(edad);
+})
+let email = document.getElementById('email');
+email.addEventListener('change', (e) => {
+    email = e.target.value;
+    console.log(email);
+})
+let cantidad = document.getElementById('cantidad');
+cantidad.addEventListener('change', (e) => {
+    cantidad = parseInt(e.target.value * 100);
+    carrito.push(cantidad)
+    console.log(carrito);
+})
 

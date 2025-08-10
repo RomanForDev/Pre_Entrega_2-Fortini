@@ -79,8 +79,10 @@ section .parent .div5 {
 
 .form {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
+  margin-left: 20rem;
+  margin-right: 20rem;
 }
 
 footer {
