@@ -199,20 +199,11 @@ function mostrarCarrito() {
         p.classList.add('mensaje')
         p.textContent = `Gracias por comprar ${cliente[0].nombreCliente}. Tu carrito es de ${cliente[0].cantidadEntradas} entradas y tu total a pagar es: ${item}`;
         showCartDiv.appendChild(p);
+        carrito.pop();
+        cliente.pop();
     });
 }
 
-////// prueba con un array de objetos //////
-// const prueba = [{
-//     nombreCliente: `${nombre.value}`,
-//     edadCliente: edad.value,
-//     emailCliente: email.value,
-//     cantidadCliente: cantidad.value
-// }]
-
-// function mostrar() {
-//     console.log(prueba);
-// }
 
 function pushear() {
     cliente.push({nombreCliente: nombre, 
@@ -221,3 +212,14 @@ function pushear() {
         cantidadEntradas: cantidad})
     console.log(cliente[0].nombreCliente, cliente[0].edadCLiente, cliente[0].emailCLiente, cliente[0].cantidadEntradas);
 };
+
+// ////Falta un clear para que reinicie porque sigue imprimiendo los mismos datos///
+// let limpiar = document.getElementById('clear');
+// limpiar.addEventListener("click", function() {
+//     // console.log('Boton apretado!');
+//     // if(carrito || cliente) {
+//     carrito.pop();
+//     cliente.pop();
+
+// })
+// };
