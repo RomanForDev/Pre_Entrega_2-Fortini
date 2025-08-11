@@ -161,7 +161,9 @@ let ticketsPlateaB = [{id: 4,
 // let edadCliente = ;
 // let emailCliente = ;
 
-////////////////////////////////////////////////////////////////////////////
+//////////////////////////Esto de arriba queda para mas adelante//////////////////////////////
+
+
 const carrito = [];
 const cliente = [];
 
@@ -170,25 +172,28 @@ let showCartDiv = document.getElementById("showCart");
 let nombre = document.getElementById('name');
 nombre.addEventListener('change', (e) => {
     nombre = e.target.value;
-})
+});
+
 let edad = document.getElementById('age');
 edad.addEventListener('change', (e) => {
     edad = e.target.value;;
-})
+});
+
 let email = document.getElementById('email');
 email.addEventListener('change', (e) => {
     email = e.target.value;
-})
+});
+
 let cantidad = document.getElementById('cantidad');
 cantidad.addEventListener('change', (e) => {
     cantidad = parseInt(e.target.value);
     carrito.push(cantidad * 100);
-    console.log(carrito);
-})
+});
 
 let botonConfirmar = document.getElementById('buttonConfirm');
 botonConfirmar.addEventListener("click", function() {
     mostrarCarrito();
+    botonConfirmar.disabled = true;
 });
 
 function mostrarCarrito() {
@@ -207,19 +212,23 @@ function mostrarCarrito() {
 
 function pushear() {
     cliente.push({nombreCliente: nombre, 
-        edadCLiente: edad, 
-        emailCLiente: email, 
+        edadCliente: edad, 
+        emailCliente: email, 
         cantidadEntradas: cantidad})
-    console.log(cliente[0].nombreCliente, cliente[0].edadCLiente, cliente[0].emailCLiente, cliente[0].cantidadEntradas);
+    console.log(cliente[0].nombreCliente, cliente[0].edadCliente, cliente[0].emailCliente, cliente[0].cantidadEntradas);
 };
 
-// ////Falta un clear para que reinicie porque sigue imprimiendo los mismos datos///
-// let limpiar = document.getElementById('clear');
-// limpiar.addEventListener("click", function() {
-//     // console.log('Boton apretado!');
-//     // if(carrito || cliente) {
-//     carrito.pop();
-//     cliente.pop();
+let reinicio = document.getElementById('clear');
+function restart() {
+    reinicio.addEventListener('click', function() {
+        showCartDiv.innerHTML = "";
+        botonConfirmar.disabled = false;
+    })
+}
+restart();
+//////Falta usar session y localStorage. Puedo usarlo para borrar los datos y que no me siga tomando el metodo change ////
 
-// })
-// };
+// comprador = sessionStorage.setItem('usuario', cliente[0])
+// muestroComprador = sessionStorage.getItem('usuario');
+// console.log(muestroComprador);
+
