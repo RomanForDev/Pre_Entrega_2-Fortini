@@ -196,6 +196,7 @@ function mostrarCarrito() {
     pushear();
     carrito.forEach(item => {
         let p = document.createElement("p");
+        p.classList.add('mensaje')
         p.textContent = `Gracias por comprar ${cliente[0].nombreCliente}. Tu carrito es de ${cliente[0].cantidadEntradas} entradas y tu total a pagar es: ${item}`;
         showCartDiv.appendChild(p);
     });

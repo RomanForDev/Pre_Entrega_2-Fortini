@@ -95,6 +95,17 @@ section{
   margin-left: 20rem;
   margin-right: 20rem;
 }
+.mensaje {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: larger;
+  padding: 1.5rem;
+  margin-left: 25rem;
+  margin-right: 25rem;
+  border: 2px solid red;
+  border-radius: 15px;
+}
 footer {
   border: 1px solid black;
   text-align: center;
