@@ -164,26 +164,39 @@ let ticketsPlateaB = [{id: 4,
 ////////////////////////////////////////////////////////////////////////////
 const carrito = [];
 
+let showCartDiv = document.getElementById("showCart");
+
 let nombre = document.getElementById('name');
 nombre.addEventListener('change', (e) => {
     nombre = e.target.value;
-    console.log(nombre);
 })
 let edad = document.getElementById('age');
 edad.addEventListener('change', (e) => {
-    edad = e.target.value;
-    console.log(edad);
+    edad = e.target.value;;
 })
 let email = document.getElementById('email');
 email.addEventListener('change', (e) => {
     email = e.target.value;
-    console.log(email);
 })
 let cantidad = document.getElementById('cantidad');
 cantidad.addEventListener('change', (e) => {
-    cantidad = parseInt(e.target.value * 100);
-    carrito.push(cantidad);
-    console.log(cantidad);
-    // carro.innerHTML = `<p>${carrito}</p>`
+    cantidad = parseInt(e.target.value);
+    carrito.push(cantidad * 100);
+    console.log(carrito);
 })
+
+let botonConfirmar = document.getElementById('buttonConfirm');
+botonConfirmar.addEventListener("click", function() {
+    mostrarCarrito();
+});
+
+function mostrarCarrito() {
+    showCartDiv.innerHTML = "";
+    carrito.forEach(item => {
+        let p = document.createElement("p");
+        p.textContent = `Gracias por comprar ${nombre}. Tu carrito es de ${cantidad} entradas y tu total es: ${item}`;
+        showCartDiv.appendChild(p);
+    });
+}
+
 
