@@ -161,7 +161,7 @@ let ticketsPlateaB = [{id: 4,
 // let edadCliente = ;
 // let emailCliente = ;
 
-//////////////////////////Esto de arriba queda para mas adelante//////////////////////////////
+//////////////////////////Esto de arriba queda para mas adelante o jamás...//////////////////////////////
 
 
 const carrito = [];
@@ -205,8 +205,8 @@ function mostrarCarrito() {
         p.classList.add('mensaje')
         p.textContent = `Gracias por comprar ${cliente[0].nombreCliente}. Tu carrito es de ${cliente[0].cantidadEntradas} entradas y tu total a pagar es: ${item}`;
         showCartDiv.appendChild(p);
-        carrito.pop();
-        cliente.pop();
+        // carrito.pop();
+        // cliente.pop();
     });
 }
 
@@ -226,10 +226,15 @@ let reinicio = document.getElementById('clear');
 function restart() {
     reinicio.addEventListener('click', function() {
         showCartDiv.innerHTML = "";
+        carrito.pop();
+        cliente.pop();
         botonConfirmar.disabled = false;
     })
 }
 restart();
+
+// No reinicia el formulario. No muestra el mensaje de nuevo si no hay cambios en todas las partes del formulario. El mensaje que muestra pone al usuario anterior.
+
 //////Falta usar session y localStorage. Puedo usarlo para borrar los datos y que no me siga tomando el metodo change ////
 // let usuario = [{nombreUser: nombre,
 //     entradasUser: cantidad,
