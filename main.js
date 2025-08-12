@@ -196,6 +196,7 @@ botonConfirmar.addEventListener("click", function() {
     botonConfirmar.disabled = true;
 });
 
+
 function mostrarCarrito() {
     showCartDiv.innerHTML = "";
     pushear();
@@ -215,7 +216,10 @@ function pushear() {
         edadCliente: edad, 
         emailCliente: email, 
         cantidadEntradas: cantidad})
-    console.log(cliente[0].nombreCliente, cliente[0].edadCliente, cliente[0].emailCliente, cliente[0].cantidadEntradas);
+    sessionStorage.setItem('usuario', JSON.stringify(cliente));
+    muestroComprador = JSON.parse(sessionStorage.getItem('usuario'));
+    console.log(muestroComprador);
+    // console.log(cliente[0].nombreCliente, cliente[0].edadCliente, cliente[0].emailCliente, cliente[0].cantidadEntradas);
 };
 
 let reinicio = document.getElementById('clear');
@@ -227,8 +231,12 @@ function restart() {
 }
 restart();
 //////Falta usar session y localStorage. Puedo usarlo para borrar los datos y que no me siga tomando el metodo change ////
+// let usuario = [{nombreUser: nombre,
+//     entradasUser: cantidad,
+//     totalUser: cantidad * 100
+// }]
 
-// comprador = sessionStorage.setItem('usuario', cliente[0])
-// muestroComprador = sessionStorage.getItem('usuario');
+// sessionStorage.setItem('usuario', JSON.stringify(usuario))
+// muestroComprador = JSON.parse(sessionStorage.getItem('usuario'));
 // console.log(muestroComprador);
 
