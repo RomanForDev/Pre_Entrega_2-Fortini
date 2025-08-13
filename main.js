@@ -235,7 +235,7 @@ function restart() {
 }
 restart();
 
-
+/// Colocar option para capturar el tipo de entrada teniendo en cuenta la ubicación. Mejorar la captura de los datos con el script
 //////Falta usar session y localStorage. Puedo usarlo para borrar los datos y que no me siga tomando el metodo change ////
 // let usuario = [{nombreUser: nombre,
 //     entradasUser: cantidad,
