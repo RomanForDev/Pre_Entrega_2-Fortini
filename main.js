@@ -207,6 +207,8 @@ function mostrarCarrito() {
         showCartDiv.appendChild(p);
         // carrito.pop();
         // cliente.pop();
+        // console.log(cliente);
+        
     // });
 }
 
@@ -233,7 +235,6 @@ function restart() {
 }
 restart();
 
-// No reinicia el formulario. No muestra el mensaje de nuevo si no hay cambios en todas las partes del formulario. El mensaje que muestra pone al usuario anterior.
 
 //////Falta usar session y localStorage. Puedo usarlo para borrar los datos y que no me siga tomando el metodo change ////
 // let usuario = [{nombreUser: nombre,
