@@ -200,14 +200,14 @@ botonConfirmar.addEventListener("click", function() {
 function mostrarCarrito() {
     showCartDiv.innerHTML = "";
     pushear();
-    carrito.forEach(item => {
+    // carrito.forEach(item => {
         let p = document.createElement("p");
         p.classList.add('mensaje')
-        p.textContent = `Gracias por comprar ${cliente[0].nombreCliente}. Tu carrito es de ${cliente[0].cantidadEntradas} entradas y tu total a pagar es: ${item}`;
+        p.textContent = `Gracias por comprar ${cliente[0].nombreCliente}. Tu carrito es de ${cliente[0].cantidadEntradas} entradas y tu total a pagar es: ${cantidad}`;
         showCartDiv.appendChild(p);
         // carrito.pop();
         // cliente.pop();
-    });
+    // });
 }
 
 
